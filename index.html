@@ -43,6 +43,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -260,6 +263,32 @@
           <p class="mb-2">When forced indoors, I can relax and play some games, watch the latest movies/shows or trade and research more about cryptocurrency and the blockchain. </p>
           <p class="mb-0"> I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
         </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
+        <div class="my-auto">
+          <h2 class="mb-5">Contact Me</h2>
+          <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdAnsoTY14W9p7E2whyaV89wugGBw3zmmFdb0FmUcwR565GKQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" placeholder="name" name="entry.648401949" id="entry.648401949">
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="text" placeholder="email" name="entry.1958509695" id="entry.1958509695">
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea type="text" placeholder="message" name="entry.470430882" id="entry.470430882"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Submit"></input>
+            </div>
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        </div>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/shinhjames/">
               <i class="fab fa-linkedin-in"></i>
@@ -285,7 +314,15 @@
     <script src="js/resume.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+      $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Your submission has been processed...');
+        });
+    </script>
 
   </body>
-
 </html>
