@@ -268,28 +268,31 @@
       <hr class="m-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
-        <div class="my-auto">
+        <div class="col-md-3 mb-3">
           <h2 class="mb-5">Contact Me</h2>
           <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdAnsoTY14W9p7E2whyaV89wugGBw3zmmFdb0FmUcwR565GKQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-            <div>
+            <div class="form-group">
               <label for="name">Name:</label>
-              <input type="text" placeholder="name" name="entry.648401949" id="entry.648401949">
+              <input class="form-control" type="text" placeholder="name" name="entry.648401949" id="entry.648401949">
             </div>
-            <div>
+            <div class="form-group">
               <label for="email">Email:</label>
-              <input type="text" placeholder="email" name="entry.1958509695" id="entry.1958509695">
+              <input class="form-control" type="text" placeholder="email" name="entry.1958509695" id="entry.1958509695">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea type="text" placeholder="message" name="entry.470430882" id="entry.470430882"></textarea>
+                <textarea class="form-control" type="text" placeholder="message" name="entry.470430882" id="entry.470430882"></textarea>
             </div>
             <div>
-              <input type="submit" value="Submit"></input>
+              <button class="btn btn-primary mb-2"type="submit" value="Submit">Submit</button>
             </div>
           </form>
           <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
         </div>
-          <div class="social-icons">
+
+      </section>
+      <footer class="col-md-3 mb-3">
+        <div class="social-icons ml-5">
             <a href="https://www.linkedin.com/in/shinhjames/">
               <i class="fab fa-linkedin-in"></i>
             </a>
@@ -299,8 +302,8 @@
             <a href="mailto:shinhjames@gmail.com">
               <i class="fas fa-at"></i>
             </a>
-          </div>
-      </section>
+          </div>        
+      </footer>
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -320,7 +323,7 @@
     <script type="text/javascript">
       $('#gform').on('submit', function(e) {
         $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your submission has been processed...');
+        $('#gform').prepend('Thank you for sending a message!');
         });
     </script>
 
