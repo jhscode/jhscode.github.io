@@ -25,4 +25,10 @@
     target: '#sideNav'
   });
 
+  var submitted=false;
+  $('#gform').on('submit', function(e) {
+    $('#gform *').fadeOut(2000);
+    $('#gform').prepend('Thank you for sending a message!');
+    });
+
 })(jQuery); // End of use strict
